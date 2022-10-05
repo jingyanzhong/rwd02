@@ -1,0 +1,449 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*以上為css reset*/
+
+*,*:before,*:after{
+	box-sizing:border-box ;
+}
+.d-flex{
+    display: flex;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+@media(max-width:992px){
+    .container{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.header{
+    margin-bottom: 30px;
+    padding: 30px 0;
+}
+.header .d-flex{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 a{
+    display: block;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logo-all-dark.svg);
+    width: 215px;
+    height: 40px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu .d-flex{
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu li{
+    margin-left: 60px;
+}
+
+.menu li a{
+    display: block;
+    color: #3F5D45;
+    text-decoration: none;
+    font-weight: 600;
+}
+.menuBar{
+    display: none;
+    font-size: 24px;
+}
+@media(max-width:576px){
+    .header{
+        padding: 16px 0;
+        position: relative;
+    }
+    .menuBar{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+    }
+    .menu li{
+        margin-left: 30px;
+    }
+}
+.shopping-cart{
+    margin-left: 19px;
+}
+
+.banner{
+    margin-bottom: 60px;
+}
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.main{
+    margin-bottom: 60px;
+}
+.main .container{
+    justify-content: space-between;
+}
+
+.aside{
+    width: 33.33333%;
+}
+
+.aside h2,.aside-manu li a{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    line-height: 33px;
+    font-weight: 600;
+}
+
+.aside h2{
+    background: #3F5D45;
+    color: #fff;
+}
+
+.aside-manu li{
+    border: 1px solid #EAF0ED;
+}
+
+.aside-manu li a{
+    display: block;
+    color: #3F5D45;
+    text-decoration: none;
+}
+
+.aside-manu li a:hover{
+    background: #EAF0ED;
+}
+
+.bg-green{
+    background: #EAF0ED;
+}
+.content{
+    width: 66.66666%;
+}
+.productList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productCard{
+    width: 48%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.productCard img{
+    display: block;
+}
+.productImg img{
+    width: 100%;
+}
+@media(max-width:576px){
+    .main .container{
+        justify-content: start;
+        flex-direction: column;
+    }
+    .aside{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .content{
+        width: 100%;
+    }
+    .productCard{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.tag p{
+    width: 36px;
+    padding: 10px;
+    background: #3F5D45;
+    color: #fff;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-weight: 600;
+}
+
+.tag img{
+    position: absolute;
+    top: 19px;
+    right: 22px;
+}
+
+.productPrice{
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #EAF0ED;
+    border-right: 1px solid #EAF0ED;
+}
+
+.productPrice h2 ,.productPrice span{
+    font-size: 20px;
+    color: #3F5D45;
+    line-height: 28px;
+    text-align: center;
+    padding: 14px 0 14px 0;
+}
+
+.productPrice h2{
+    width: 173px;
+}
+
+.productPrice span{
+    width: 127px;
+    border-left: 1px solid #EAF0ED;
+    font-weight: 600;
+}
+
+.productCart{
+    display: block;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 0 16px 0;
+    background: #EAF0ED;
+    color: #3F5D45;
+    font-weight: 600;
+}
+
+.pagination-body{
+    display: flex;
+    justify-content: flex-end;
+}
+@media(max-width:576px){
+    .pagination-body{
+        justify-content: center;
+    }
+}
+.pagination-body a{
+    display: block;
+    width: 60px;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 15px 0 15px 0;
+    text-decoration: none;
+    text-align: center;
+    color: #3F5D45;
+    border: 1px solid #EAF0ED;
+}
+
+.pagination-body a img{
+    display: block;
+    padding:2px 18px 2px 18px;
+}
+
+.pagination-body .bg-darkgreen{
+    background: #3F5D45;
+    color: #fff;
+    border: 1px solid #3F5D45;
+}
+
+.formList{
+    background: #3F5D45;
+    padding: 30px 0;
+}
+.formLogo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.formLogo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.formLogo h2{
+    font-size: 24px;
+    color: #fff;
+}
+
+.formListBody{
+    background: #EAF0ED;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formListBody label img{
+    padding: 16px 20px 16px 20px;
+    display: block;
+}
+
+.formListBody input{
+    width: 252px;
+    background: #EAF0ED;
+    border: none;
+    font-size: 24px;
+}
+
+.formListBody .btn{
+    background: #FFE180;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.formListBody .btn img{
+    display: block;
+}
+@media(max-width:576px){
+    .formList .d-flex{
+        flex-direction: column;
+    }
+    .formLogo{
+        margin: 0 auto 16px auto;
+    }
+    .formListBody{
+        width: 100%;
+    }
+    .formListBody input{
+        width: 100%;
+    }
+}
+.footer{
+    padding: 30px;
+    background: #EAF0ED;
+}
+.footerLeft{
+    margin-right: auto;
+}
+.footerLeft .footerLogo{
+    display: block;
+    width: 172px;
+    height: 27px;
+    margin-bottom: 116px;
+}
+
+.footerLeftBody p{
+    color: #3F5D45;
+    line-height: 24px;
+    font-family: Helvetica, sans-serif;
+}
+
+.footerLeftBodyIcon{
+    display: flex;
+}
+
+.footerLeftBodyIcon a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-top: 30px;
+    margin-right: 8px;
+}
+
+.footerRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.footerRight h2{
+    font-size: 24px;
+    color: #3F5D45;
+    writing-mode: vertical-rl;
+    line-height: 32px;
+    letter-spacing: 6px;
+    text-indent: -12px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.footerRight span{
+    display: block;
+    border-left: 1px solid #3F5D45;
+    height: 48px;
+    position: absolute;
+    top: 120px;
+    right: 12px;
+}
+
+.footerRight p{
+    color: #3F5D45;
+}
+@media(max-width:576px){
+    .footer .d-flex{
+        flex-direction: column;
+    }
+    .footerLeft .footerLogo{
+        margin-bottom: 36px;
+    }
+    .footerLeftBodyIcon a{
+        margin-top: 4px;
+    }
+    .footerRight h2{
+        display: none;
+    }
+    .footerRight{
+        align-items: flex-start;
+        margin-top: 4px;
+    }
+}
